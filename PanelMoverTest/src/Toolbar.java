@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
@@ -16,6 +17,7 @@ public class Toolbar extends JPanel implements ActionListener {
 	private JButton flipDirectionButton;
 	private JButton startMovementButton;
 	private JButton stopMovementButton;
+	private JLabel comboBoxLabel;
 	private JComboBox<Integer> velocityList;
 
 	private ToolbarListener toolbarListener;
@@ -35,6 +37,8 @@ public class Toolbar extends JPanel implements ActionListener {
 		stopMovementButton.setEnabled(false);
 		stopMovementButton.addActionListener(this);
 
+		comboBoxLabel = new JLabel("Geschwindigkeit in %: ");
+		
 		Integer[] velocities = { 5, 10, 25, 50, 100 };
 		velocityList = new JComboBox<Integer>(velocities);
 		velocityList.setSelectedIndex(2);
@@ -76,6 +80,7 @@ public class Toolbar extends JPanel implements ActionListener {
 		add(flipDirectionButton);
 		add(startMovementButton);
 		add(stopMovementButton);
+		add(comboBoxLabel);
 		add(velocityList);
 
 	}
