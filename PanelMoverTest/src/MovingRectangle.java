@@ -5,7 +5,7 @@ import javax.swing.JPanel;
  * 
  *
  */
-public class MovingPanel extends JPanel implements Runnable {
+public class MovingRectangle extends JPanel implements Runnable {
 
 	private static int count = 1;
 	
@@ -31,7 +31,7 @@ public class MovingPanel extends JPanel implements Runnable {
 	 * @param height
 	 * @param color
 	 */
-	public MovingPanel(MovingRectanglePanel outerPanel,
+	public MovingRectangle(MovingRectanglePanel outerPanel,
 					   int width,
 					   int height,
 					   Color color) {

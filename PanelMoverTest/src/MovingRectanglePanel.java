@@ -13,8 +13,8 @@ import javax.swing.JPanel;
  */
 public class MovingRectanglePanel extends JPanel {
 	
-	private MovingPanel movingPanel1;
-	private MovingPanel movingPanel2;
+	private MovingRectangle movingPanel1;
+	private MovingRectangle movingPanel2;
 
 	private MovingRectanglePanelListener panelSizeListener;
 
@@ -60,8 +60,8 @@ public class MovingRectanglePanel extends JPanel {
 		setPreferredSize(dim);
 		
 		//problem: when resizing the outer panel, error cases can occur at panel1
-		movingPanel1 = new MovingPanel(this, 50, 50, Color.BLUE);
-		movingPanel2 = new MovingPanel(this, 40, 40, Color.RED);
+		movingPanel1 = new MovingRectangle(this, 50, 50, Color.BLUE);
+		movingPanel2 = new MovingRectangle(this, 40, 40, Color.RED);
 		movingPanel2.setMoveClockwise(false);
 		
 		this.setLayout(null);
