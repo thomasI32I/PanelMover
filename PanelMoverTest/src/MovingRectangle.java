@@ -155,7 +155,7 @@ public class MovingRectangle extends JPanel implements Runnable {
 		int heigth = getHeight();
 
 		if (yCoordinate == 0 && (xCoordinate > 0)) { // decke entlang <--
-			setLocation(xCoordinate - 1, yCoordinate);
+			setLocation(--xCoordinate, yCoordinate);
 
 			setAtLeftBorder(false);
 			setAtLowerBorder(false);
@@ -164,7 +164,7 @@ public class MovingRectangle extends JPanel implements Runnable {
 		}
 
 		if (xCoordinate == 0 && (yCoordinate + heigth) < outerPanel.getHeight()) { // links runter
-			setLocation(xCoordinate, yCoordinate + 1);
+			setLocation(xCoordinate, ++yCoordinate);
 
 			setAtLeftBorder(true);
 			setAtLowerBorder(false);
@@ -176,7 +176,7 @@ public class MovingRectangle extends JPanel implements Runnable {
 				&& (yCoordinate + heigth) == outerPanel.getHeight()) { // boden
 																												// entlang
 																												// -->
-			setLocation(xCoordinate + 1, yCoordinate);
+			setLocation(++xCoordinate, yCoordinate);
 
 			setAtLeftBorder(false);
 			setAtLowerBorder(true);
@@ -185,7 +185,7 @@ public class MovingRectangle extends JPanel implements Runnable {
 		}
 
 		if (((xCoordinate + width) == outerPanel.getWidth()) && yCoordinate > 0) { // rechts hoch
-			setLocation(xCoordinate, yCoordinate - 1);
+			setLocation(xCoordinate, --yCoordinate);
 
 			setAtLeftBorder(false);
 			setAtLowerBorder(false);
