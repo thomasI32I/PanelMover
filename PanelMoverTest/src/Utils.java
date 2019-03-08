@@ -5,6 +5,10 @@ import java.io.File;
 
 import javax.swing.ImageIcon;
 
+/**
+ * Helper class to load and resize images.
+ *
+ */
 public class Utils {
 
 	public static String getFileExtension(File f) {
