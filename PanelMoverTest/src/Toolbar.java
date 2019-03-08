@@ -1,8 +1,10 @@
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -29,11 +31,14 @@ public class Toolbar extends JPanel implements ActionListener {
 
 		setBorder(BorderFactory.createEtchedBorder());
 
-		flipDirectionButton = new JButton("Flip Direction");
+		flipDirectionButton = new JButton();
+		flipDirectionButton.setIcon(Utils.createImageIcon("/images/invert16.png", ""));
 		flipDirectionButton.addActionListener(this);
-		startMovementButton = new JButton("Start");
+		startMovementButton = new JButton();
+		startMovementButton.setIcon(Utils.createImageIcon("/images/start.png", ""));
 		startMovementButton.addActionListener(this);
-		stopMovementButton = new JButton("Stop");
+		stopMovementButton = new JButton();
+		stopMovementButton.setIcon(Utils.createImageIcon("/images/stop.png", ""));
 		stopMovementButton.setEnabled(false);
 		stopMovementButton.addActionListener(this);
 
